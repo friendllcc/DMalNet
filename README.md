@@ -38,7 +38,7 @@
 - `detection_model_test_demo.py`: test on the demo set of malware detection.
 - `classification_model_test_demo.py`: test on the demo set of malware classification.
 
-## Test
+## Train & Test
 
 Since the size of original data is too large(the original software samples are about 2TB, cuckoo reports about 3.4TB, feature vectors about 20GB), we just submit a test demo set to verify our models. Users can extract API call graph from their own malware samples using our code.
 

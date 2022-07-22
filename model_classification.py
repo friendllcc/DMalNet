@@ -198,7 +198,7 @@ def test(loader):
 print(model)
 
 # In[47]:
-
+# train
 for epoch in tqdm(range(1, 401)):
     # train
     loss = train(epoch, data_train_loader)
@@ -210,16 +210,16 @@ for epoch in tqdm(range(1, 401)):
     print(
         'Epoch: {:03d}, Loss: {:.5f}, Train Acc: {:.5f}, Train Precision: {:.5f}, Train Recall: {:.5f}, Train F1: {:.5f}'.
             format(epoch, loss, acc, precision, recall, f1))
-    # test
-    acc, precision, recall, f1 = test(data_test_loader)
-    test_scores['acc'].append(acc)
-    test_scores['precision'].append(precision)
-    test_scores['recall'].append(recall)
-    test_scores['f1'].append(f1)
-    print('Epoch: {:03d}, Loss: {:.5f}, Test Acc: {:.5f}, Test Precision: {:.5f}, Test Recall: {:.5f}, Test F1: {:.5f}'.
-          format(epoch, loss, acc, precision, recall, f1))
+# test
+acc, precision, recall, f1 = test(data_test_loader)
+test_scores['acc'].append(acc)
+test_scores['precision'].append(precision)
+test_scores['recall'].append(recall)
+test_scores['f1'].append(f1)
+print('Epoch: {:03d}, Loss: {:.5f}, Test Acc: {:.5f}, Test Precision: {:.5f}, Test Recall: {:.5f}, Test F1: {:.5f}'.
+      format(epoch, loss, acc, precision, recall, f1))
 
-    # torch.save(model, './model/classification_model.pkl')
+# torch.save(model, './model/classification_model.pkl')
 
 
 # ablation study

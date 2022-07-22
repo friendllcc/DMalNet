@@ -165,9 +165,8 @@ def test(loader):
 print(model)
 
 # In[35]:
-
+# train
 for epoch in tqdm(range(1, 401)):
-    # train
     loss = train(epoch, data_train_loader)
     con, acc, precision, recall, f1 = test(data_train_loader)
     print(
@@ -178,17 +177,18 @@ for epoch in tqdm(range(1, 401)):
     train_scores['precision'].append(precision)
     train_scores['recall'].append(recall)
     train_scores['f1'].append(f1)
-    # test
-    con, acc, precision, recall, f1 = test(data_test_loader)
-    test_scores['confusion_matrix'].append(con)
-    test_scores['acc'].append(acc)
-    test_scores['precision'].append(precision)
-    test_scores['recall'].append(recall)
-    test_scores['f1'].append(f1)
-    print('Epoch: {:03d}, Loss: {:.5f}, Test Acc: {:.5f}, Test Precision: {:.5f}, Test Recall: {:.5f}, Test F1: {:.5f}'.
-          format(epoch, loss, acc, precision, recall, f1))
 
-    # torch.save(model, './model/detection_model.pkl')
+# test
+con, acc, precision, recall, f1 = test(data_test_loader)
+test_scores['confusion_matrix'].append(con)
+test_scores['acc'].append(acc)
+test_scores['precision'].append(precision)
+test_scores['recall'].append(recall)
+test_scores['f1'].append(f1)
+print('Epoch: {:03d}, Loss: {:.5f}, Test Acc: {:.5f}, Test Precision: {:.5f}, Test Recall: {:.5f}, Test F1: {:.5f}'.
+      format(epoch, loss, acc, precision, recall, f1))
+
+# torch.save(model, './model/detection_model.pkl')
 
 
 # ablation study

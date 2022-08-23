@@ -65,3 +65,15 @@ The model test code execution sequence is as follows:
 - extract the `data_test_demo.zip` and get `demo_classification_test.pt` and `demo_detection_test.pt`.
 - run `detection_model_test_demo.py` or `classification_model_test_demo.py` on GPU.
 
+## DMalNet
+
+```
+@article{li2022dmalnet,
+  title={DMalNet: Dynamic Malware Analysis Based on API Feature Engineering and Graph Learning},
+  author={Li, Ce and Cheng, Zijun and Zhu, He and Wang, Leiqi and Lv, Qiujian and Wang, Yan and Li, Ning and Sun, Degang},
+  journal={Computers \& Security},
+  pages={102872},
+  year={2022},
+  publisher={Elsevier}
+}
+```

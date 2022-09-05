@@ -65,7 +65,7 @@ The model test code execution sequence is as follows:
 - extract the `data_test_demo.zip` and get `demo_classification_test.pt` and `demo_detection_test.pt`.
 - run `detection_model_test_demo.py` or `classification_model_test_demo.py` on GPU.
 
-## DMalNet
+## Cite
 
 ```
 @article{li2022dmalnet,
